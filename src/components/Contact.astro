@@ -1,0 +1,35 @@
+---
+import AddressBlock from './Contact/AddressBlock.astro';
+import OpeningHours from './Contact/OpeningHours.astro';
+import CompanyInfo from './Contact/CompanyInfo.astro';
+---
+
+<section id="contact" class="min-h-screen bg-neutral-900 text-white py-20 px-8">
+  <div class="max-w-[1800px] mx-auto">
+    <!-- Section Label -->
+    <div class="text-[#C15627] mb-12 tracking-wider text-sm">
+      [CONTACT US]
+    </div>
+
+    <!-- Main Heading -->
+    <div class="mb-32">
+      <h2 class="text-[8rem] md:text-[12rem] font-extralight leading-[0.8] tracking-[-0.02em]">
+        Materialise<br />
+        your vision
+      </h2>
+      <a 
+        href="mailto:contact@entuitiveengineering.com.au" 
+        class="text-2xl md:text-3xl text-white/80 hover:text-white border-b border-white/20 pb-2 transition-colors"
+      >
+        contact@entuitiveengineering.com.au
+      </a>
+    </div>
+
+    <!-- Contact Information Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+      <AddressBlock />
+      <OpeningHours />
+      <CompanyInfo />
+    </div>
+  </div>
+</section>

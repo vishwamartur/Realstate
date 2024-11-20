@@ -1,0 +1,31 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-secondary text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Entuitive Engineering</h3>
+        <p class="text-gray-300">
+          Innovative engineering solutions for a better future.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contact</h3>
+        <p class="text-gray-300">Email: info@entuitiveengineering.com.au</p>
+        <p class="text-gray-300">Phone: (02) 1234 5678</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white">LinkedIn</a>
+          <a href="#" class="text-gray-300 hover:text-white">Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+      <p>&copy; {currentYear} Entuitive Engineering. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

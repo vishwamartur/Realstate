@@ -1,0 +1,65 @@
+---
+const cultureItems = [
+  {
+    title: 'Our People',
+    link: '#people'
+  },
+  {
+    title: 'Sustainability',
+    link: '#sustainability'
+  },
+  {
+    title: 'Quality Assurance',
+    link: '#quality'
+  }
+];
+---
+
+<section id="culture" class="min-h-screen bg-[#F5F5F1] text-black py-20">
+  <div class="max-w-[1800px] mx-auto px-8">
+    <!-- Section Label -->
+    <div class="text-[#C15627] mb-12 tracking-wider text-sm">
+      [A DUTY OF CARE]
+    </div>
+
+    <!-- Main Heading -->
+    <h2 class="text-[12rem] md:text-[16rem] lg:text-[20rem] font-extralight leading-[0.8] tracking-[-0.02em] mb-32">
+      A Culture<br />
+      of Care
+    </h2>
+
+    <!-- Description and Image Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+      <!-- Left Column - Description -->
+      <div class="space-y-12">
+        <p class="text-2xl font-light leading-relaxed max-w-xl">
+          We have an unwavering commitment to produce quality engineering, at scale, back by holistic and mature systems.
+        </p>
+
+        <!-- Culture Links -->
+        <div class="space-y-6 mt-20">
+          {cultureItems.map(item => (
+            <a 
+              href={item.link}
+              class="group block border-t border-neutral-300 py-6 transition-colors hover:bg-white/50"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-light">{item.title}</span>
+                <span class="transform group-hover:translate-x-2 transition-transform">→</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right Column - Image -->
+      <div class="relative">
+        <img 
+          src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200"
+          alt="Architectural detail"
+          class="w-full aspect-[4/3] object-cover rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>

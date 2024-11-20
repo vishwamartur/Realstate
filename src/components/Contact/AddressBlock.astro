@@ -1,0 +1,44 @@
+---
+interface Office {
+  name: string;
+  address: string;
+  tel: string;
+  satellite?: boolean;
+}
+
+const offices: Office[] = [
+  {
+    name: 'MELBOURNE',
+    address: '11 Wilson St, South Yarra, 3141.',
+    tel: '03 9125 8522'
+  },
+  {
+    name: 'GEELONG',
+    address: 'Level 2, 65 Moorabool St, Geelong, 3220.',
+    tel: '03 5292 3580',
+    satellite: true
+  },
+  {
+    name: 'ADELAIDE',
+    address: '217 Flinders St, Adelaide, 5000',
+    tel: '08 8472 9888',
+    satellite: true
+  }
+];
+---
+
+<div class="space-y-8">
+  <h3 class="text-lg text-white/60 uppercase tracking-wider">Address</h3>
+  
+  <div class="space-y-12">
+    {offices.map(office => (
+      <div>
+        <h4 class="font-medium mb-2">
+          {office.name}{office.satellite && ' (SATELLITE OFFICE)'}
+        </h4>
+        <p class="text-white/80">{office.address}</p>
+        <p class="text-white/80">Tel: {office.tel}</p>
+      </div>
+    ))}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+---
+const hours = [
+  '8.30am to 6.00pm,',
+  'Monday to Friday,',
+  'Weekends by appointment.'
+];
+---
+
+<div class="space-y-8">
+  <h3 class="text-lg text-white/60 uppercase tracking-wider">Opening Hours</h3>
+  <div class="space-y-2 text-white/80">
+    {hours.map(time => <p>{time}</p>)}
+  </div>
+</div>

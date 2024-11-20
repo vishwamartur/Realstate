@@ -1,0 +1,77 @@
+---
+const services = [
+  {
+    id: "01",
+    title: "Structural Engineering",
+    description: "Comprehensive structural analysis and design solutions for buildings and infrastructure.",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800"
+  },
+  {
+    id: "02",
+    title: "Civil Engineering",
+    description: "Expert civil engineering services for infrastructure and development projects.",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800"
+  },
+  {
+    id: "03",
+    title: "Building Services",
+    description: "Integrated building services design and documentation.",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800"
+  }
+];
+---
+
+<section id="services" class="min-h-screen bg-white text-black py-20 px-8">
+  <!-- Section Header -->
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Label -->
+    <div class="text-neutral-500 mb-12 tracking-wider text-sm">
+      [SERVICES OF DISTINCTION]
+    </div>
+
+    <!-- Main Heading -->
+    <h2 class="text-[12rem] font-extralight leading-none tracking-[-0.02em] mb-24">
+      Services
+    </h2>
+
+    <!-- Description and CTA -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+      <p class="text-2xl font-light leading-relaxed">
+        Our engineering solutions are crafted with safety and intelligence, drawing on many years of working with architects, developers, and contractors.
+      </p>
+      <div class="flex items-center">
+        <a href="#contact" class="group inline-flex items-center gap-4 bg-black text-white px-8 py-4 rounded-full hover:bg-neutral-800 transition-colors">
+          Discuss a project
+          <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="space-y-32">
+      {services.map((service) => (
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <!-- Service Number -->
+          <div class="md:col-span-2">
+            <div class="text-6xl font-light text-neutral-300">[{service.id}]</div>
+          </div>
+          
+          <!-- Service Content -->
+          <div class="md:col-span-5">
+            <h3 class="text-5xl font-light mb-6">{service.title}</h3>
+            <p class="text-xl text-neutral-600">{service.description}</p>
+          </div>
+
+          <!-- Service Image -->
+          <div class="md:col-span-5">
+            <img 
+              src={service.image} 
+              alt={service.title}
+              class="w-full h-[400px] object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

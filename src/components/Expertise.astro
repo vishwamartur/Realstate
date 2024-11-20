@@ -1,0 +1,61 @@
+---
+import ExpertiseItem from './ExpertiseItem';
+
+const sectors = [
+  'Residential',
+  'Commercial',
+  'Industrial',
+  'Retail',
+  'Education',
+  'Community'
+];
+---
+
+<section id="expertise" class="min-h-screen bg-neutral-900 text-white py-20">
+  <div class="max-w-[1800px] mx-auto px-8">
+    <!-- Section Label -->
+    <div class="text-[#C15627] mb-12 tracking-wider text-sm">
+      [SECTORS OF DISTINCTION]
+    </div>
+
+    <!-- Main Heading -->
+    <h2 class="text-[20rem] font-extralight leading-[0.8] tracking-[-0.02em] mb-32">
+      Expertise
+    </h2>
+
+    <!-- Description and CTA -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+      <p class="text-2xl font-light leading-relaxed text-neutral-300 max-w-xl">
+        Major project or single storey construction, we offer a personalised and attentive service. Entuitive has distinction in the following public and private sectors.
+      </p>
+      <div class="flex items-center">
+        <a 
+          href="#contact" 
+          class="group inline-flex items-center gap-4 bg-black text-white px-8 py-4 rounded-full border border-neutral-800 hover:bg-neutral-800 transition-colors"
+        >
+          Request for proposal
+          <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Expertise List -->
+    <div class="mt-32 relative">
+      <!-- Background Image -->
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[400px] opacity-50">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200"
+          alt="Architecture"
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+
+      <!-- Sectors List -->
+      <div class="relative z-10">
+        {sectors.map((sector, index) => (
+          <ExpertiseItem client:visible index={index}>{sector}</ExpertiseItem>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

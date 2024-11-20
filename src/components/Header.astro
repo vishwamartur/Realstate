@@ -1,0 +1,40 @@
+---
+import LocalTime from './Header/LocalTime';
+
+const navItems = [
+  { text: "About", href: "/about", code: "01" },
+  { text: "Services", href: "/services", code: "02" },
+  { text: "Expertise", href: "/expertise", code: "03" },
+  { text: "Culture", href: "/culture", code: "04" },
+  { text: "Contact", href: "/contact", code: "05" },
+];
+---
+
+<header class="fixed w-full z-50 p-8">
+  <div class="flex justify-between items-center">
+    <a href="/" class="text-white text-xl font-light tracking-wider">
+      ENTUITIVE ENGINEERING
+    </a>
+    
+    <div class="hidden md:flex items-center gap-12">
+      <LocalTime client:load />
+      <nav class="flex flex-col space-y-2">
+        {navItems.map(item => (
+          <a 
+            href={item.href}
+            class="text-white/80 hover:text-white flex items-center justify-end space-x-2 transition-colors text-sm"
+          >
+            <span>{item.text}</span>
+            <span class="opacity-50">[{item.code}]</span>
+          </a>
+        ))}
+      </nav>
+    </div>
+
+    <button class="md:hidden text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+</header>

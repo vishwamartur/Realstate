@@ -1,0 +1,41 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title,
+  description = "Entuitive Engineering - Innovative Engineering Solutions in Australia"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans bg-neutral-900">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 27, 117, 188;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .sepia {
+    filter: sepia(0.3);
+  }
+</style>
